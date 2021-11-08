@@ -1,0 +1,151 @@
+*{  
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+
+
+main{
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(#af67e9, #6565e7); */
+    background: linear-gradient(#AA52A8, #887EDC);
+    min-height: 100%;
+
+   
+
+   
+}
+
+body {
+font-family: 'Nanum Gothic', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.faq{
+    width: 65%;
+    min-height: 450px;
+    box-shadow:0px 25px 50px rgba(0,0,0,0.3) ;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.7);
+    background: rgba( 255, 255, 255, 0.15 );
+    backdrop-filter: blur(45px) ;
+    color: #F9F871;
+    
+}
+
+.faq .illustration{
+    position: relative;
+    left: -120px;
+    width:50%;
+    margin: 50px 0;
+    border-radius:5px;
+    
+}
+
+.faq .content{
+    width: 40%;
+    padding-bottom: 20px;
+    
+}
+
+.faq .content h1{
+    font-size: 32px;
+    font-weight:700;
+    margin-bottom: 30px;
+}
+
+.faq .content .items{
+    list-style: none;
+}
+
+.faq .content .items .item{
+    cursor: pointer;
+    background: url(../images/icone-seta-pra-baixo.png) no-repeat;
+    background-position: top 8px right 0;
+    background-size: 12px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.faq .content .items .item:last-child{
+    border-bottom: 15px;
+}
+
+.item .question{
+    padding-bottom: 15px;
+    font-size: 18px;
+    width: 90%;
+    transition: 0.2s ease;
+}
+.item .question:hover{
+    color: #4f38b9b7;
+}
+
+.item .answer {
+    display: none;
+    padding-bottom: 15px;
+    color: #FCFCD4;
+    
+}
+
+@media (max-width: 1140px) {
+    .faq{
+        flex-direction: column;
+        width:90%;
+    }
+
+    .faq .content{
+       width: 100%;
+    }
+
+    .faq .content h1{
+        font-size: 24px;
+        text-align: center;
+    }
+    .faq .items{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .faq .answer{
+        font-size: 16px;
+    }
+
+    .faq .illustration{
+        width: 40%;
+        left: 0;
+        margin: 30px 0;
+    }
+}   
+
+/* Estilos do item ativo */
+
+.faq .items .item.ativo h2 {
+    font-weight: 700;
+}
+
+.faq .items .item.ativo .answer {
+    display: block;
+}
+
+.faq .items .item.ativo{
+    background-image: url('../images/icone-seta-pra-cima.png');
+}
+
+
+@media (min-width: 425px){
+    .faq{
+        height: 540px;
+    }
+}
